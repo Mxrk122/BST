@@ -1,6 +1,9 @@
 // Java program to demonstrate
 // insert operation in binary
 // search tree
+/**
+ * @author: GeeksforGeeks
+ */
 class BinarySearchTree<T> {
  
     /* Class containing left
@@ -15,6 +18,12 @@ class BinarySearchTree<T> {
          root = null;
     }
  
+    
+    /** 
+     * @param key
+     * @param valor
+     * @return Node
+     */
     // This method mainly calls insertRec()
     Node insert(int key, Association<String,String[]> valor)
     {
@@ -22,6 +31,13 @@ class BinarySearchTree<T> {
          return root;
     }
  
+    
+    /** 
+     * @param root
+     * @param key
+     * @param valor
+     * @return Node
+     */
     /* A recursive function to
        insert a new key in BST */
     Node insertRec(Node root, int key, Association<String,String[]> valor)
@@ -51,6 +67,10 @@ class BinarySearchTree<T> {
          inorderRec(root);
     }
  
+    
+    /** 
+     * @param root
+     */
     // A utility function to
     // do inorder traversal of BST
     void inorderRec(Node root)
@@ -62,6 +82,12 @@ class BinarySearchTree<T> {
         }
     }
 
+    
+    /** 
+     * @param root
+     * @param key
+     * @return Node
+     */
     // A utility function to search a given key in BST
     public Node search(Node root, int key)
     {
@@ -77,6 +103,10 @@ class BinarySearchTree<T> {
         return search(root.left, key);
     }
 
+    
+    /** 
+     * @return Node
+     */
     public Node getRoot() {
         return root;
     }

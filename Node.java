@@ -1,3 +1,6 @@
+/**
+ * @author: GeeksforGeeks
+ */
 class Node
     {
         int key;
@@ -13,10 +16,26 @@ class Node
             traduccion = valor;
         }
 
+        
+        /** 
+         * @return Association<String, String[]>
+         */
         public Association<String, String[]> getTraduccion() {
             return traduccion;
         }
 
+        
+        /** 
+         * @return int
+         */
+        public int getKey() {
+            return key;
+        }
+
+        
+        /** 
+         * @return String
+         */
         @Override
         public String toString() {
         // TODO Auto-generated method stub

@@ -3,8 +3,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+
+/**
+ * @author: Marco Orozco 20857
+ */
 import java.util.Scanner;
 public class Driver {
+    
+    /** 
+     * @param args
+     * @throws IOException
+     */
     // Driver Code
     public static void main(String[] args) throws IOException
     {
@@ -41,9 +50,9 @@ public class Driver {
                 traduccionesIngles[1] = palabraFr;
 
                 //Español
-                String[] traduccionesEspañol = new String[2];
-                traduccionesEspañol[0] = palabraEn;
-                traduccionesEspañol[1] = palabraFr;
+                String[] traduccionesEspanol = new String[2];
+                traduccionesEspanol[0] = palabraEn;
+                traduccionesEspanol[1] = palabraFr;
 
                 //Frances
                 String[] traduccionesFrances = new String[2];
@@ -54,8 +63,8 @@ public class Driver {
                 Association<String, String[]> ingles = new Association<String, String[]>(palabraEn, traduccionesIngles);
                 treeEn.insert(i, ingles);
 
-                Association<String, String[]> español = new Association<String, String[]>(palabraEs, traduccionesEspañol);
-                treeEs.insert(i, español);
+                Association<String, String[]> espanol = new Association<String, String[]>(palabraEs, traduccionesEspanol);
+                treeEs.insert(i, espanol);
 
                 Association<String, String[]> frances = new Association<String, String[]>(palabraFr, traduccionesIngles);
                 treeFr.insert(i, frances);
@@ -75,7 +84,7 @@ public class Driver {
             System.out.println("Elige el lenguaje de entrada (El lenguaje en el que esta escrito el Texto a traducir)");
             System.out.println("(si no eliges el lenguaje correcto, no obtendras la traduccion correcta)");
             System.out.println("1. Ingles");
-            System.out.println("2. Español");
+            System.out.println("2. Espanol");
             System.out.println("3. Frances");
 
             lenguajeElegido = scan.nextInt();
